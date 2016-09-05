@@ -42,6 +42,32 @@ namespace XamDialogs
 				mDatePicker.Date = (NSDate)DateTime.SpecifyKind(value, DateTimeKind.Local);
 			}
 		}
+
+		public DateTime MaximumDate
+		{
+			get
+			{
+				return DateTime.SpecifyKind((DateTime)mDatePicker.MaximumDate, DateTimeKind.Utc).ToLocalTime();
+			}
+
+			set
+			{
+				mDatePicker.MaximumDate = (NSDate)DateTime.SpecifyKind(value, DateTimeKind.Local);
+			}
+		}
+
+		public DateTime MinimumDate
+		{
+			get
+			{
+				return DateTime.SpecifyKind((DateTime)mDatePicker.MinimumDate, DateTimeKind.Utc).ToLocalTime();
+			}
+
+			set
+			{
+				mDatePicker.MinimumDate = (NSDate)DateTime.SpecifyKind(value, DateTimeKind.Local);
+			}
+		}
 			
 		/// <summary>
 		/// Called when the selected data has changed
