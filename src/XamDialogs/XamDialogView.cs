@@ -188,7 +188,7 @@ namespace XamDialogs
 			get
 			{
 				if (mButtonsLabelColor == null)
-					return (this.BlurEffectStyle == UIBlurEffectStyle.Dark) ? UIColor.White : UIColor.Black;
+					return TitleLabelTextColor;
 
 				return mButtonsLabelColor;
 			}
